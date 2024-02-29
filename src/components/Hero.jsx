@@ -1,10 +1,14 @@
-import styles from "../styles/hero.module.css"
+import data from "../data";
+import styles from "../styles/hero.module.css";
+import Cards from "./Cards";
 
 function Hero() {
   return (
-    <>
-      <h2>Hero</h2>
-    </>
+    <div className={styles.hero}>
+      {data.map((item, index) => (
+        <Cards item={item} key={index} />
+      ))}
+    </div>
   );
 }
 
